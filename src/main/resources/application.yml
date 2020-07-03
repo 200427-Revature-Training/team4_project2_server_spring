@@ -1,0 +1,23 @@
+server:
+  port: 80
+
+jwt:
+   secret: team4
+
+spring:
+  datasource:
+    url: jdbc:postgresql://${P0_APP_URL}/project2
+    username: ${P0_APP_ROLE}
+    password: ${P0_APP_PASS}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate: 
+        jdbc:
+          lob:
+            non-contextual-creation: true
+    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    
